@@ -32,7 +32,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+@import '/assets/elements';
+
 .component {
   width: 40%;
 }

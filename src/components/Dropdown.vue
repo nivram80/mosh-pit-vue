@@ -1,10 +1,19 @@
 <template>
-  <div class="dropdown">
-    <div class="select">
+  <div
+    class="dropdown"
+    v-click-outside="hideOptions"
+  >
+    <div
+      class="select"
+      @click="toggleOptions"
+    >
       <div class="placeholder">{{placeholder}}</div>
       <KeyboardArrowDownIcon />
     </div>
-    <div class="options">
+    <div
+      class="options"
+      v-show="showOptions"
+    >
       <div
         class="option"
         v-for="option in options"
@@ -18,6 +27,7 @@
 
 <script>
 import KeyboardArrowDownIcon from '@/components/icons/KeyboardArrowDownIcon.vue'
+import { ClickOutsideDirective } from '@/directives/ClickOutsideDirective.js';
 
 export default {
   name: "Dropdown",
@@ -32,6 +42,22 @@ export default {
     options: {
       type: Array,
       required: true
+    }
+  },
+  directives: {
+    ClickOutsideDirective
+  },
+  data () {
+    return {
+      showOptions: false
+    }
+  },
+  methods: {
+    toggleOptions() {
+      this.showOptions = !this.showOptions
+    },
+    hideOptions() {
+      this.showOptions = false;
     }
   }
 }
@@ -51,9 +77,22 @@ export default {
 }
 
 .options {
+  position: relative;
+  top: -40px;
+  background: white;
+  border: solid 1px black;
+  border-radius: 2px;
 
   .option {
+    @include flex(row, flex-start, center);
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    cursor: pointer;
 
+    &:hover {
+      background: lightgrey;
+    }
   }
 
 }
