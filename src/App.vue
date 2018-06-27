@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <Dropdown
-      :label="'Best Royals Player'"
-      :options="players"
-    />
+    <section class="component">
+      <h1>Dropdowns</h1>
+      <Dropdown
+        :placeholder="'Best Royals Player'"
+        :options="players"
+      />
+    </section>
   </div>
 </template>
 
 <script>
-import Dropdown from './components/Dropdown.vue'
+import Dropdown from '@/components/Dropdown.vue'
 
 export default {
   name: 'app',
@@ -30,5 +33,7 @@ export default {
 </script>
 
 <style>
-
+.component {
+  width: 40%;
+}
 </style>
