@@ -35,6 +35,7 @@ export default {
   padding: 8px;
   border: solid 1px black;
   border-radius: 2px;
+  color: lightgray;
   cursor: pointer;
 }
 </style>

@@ -3,6 +3,7 @@
     class="dropdown"
     v-click-outside="hideOptions"
   >
+    <div class="label">{{label}}</div>
     <DropdownSelect :placeholder="placeholder" @toggleOptions="toggleOptions" />
     <DropdownOptions :showOptions="showOptions" :options="options" />
   </div>
@@ -20,9 +21,13 @@ export default {
     DropdownOptions
   },
   props: {
+    label: {
+      type: String,
+      required: false
+    },
     placeholder: {
       type: String,
-      required: true
+      required: false
     },
     options: {
       type: Array,
@@ -47,3 +52,10 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+</style>

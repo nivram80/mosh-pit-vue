@@ -3,7 +3,8 @@
     <section class="component">
       <h1>Dropdowns</h1>
       <Dropdown
-        :placeholder="'Best Royals Player'"
+        :label="'Best Royals Player'"
+        :placeholder="'Choose...'"
         :options="players"
       />
     </section>
