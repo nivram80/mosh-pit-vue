@@ -6,7 +6,12 @@
         :label="'Best Royals Player'"
         :placeholder="'Choose...'"
         :options="players"
+        :model="bestPlayer"
+        @setOption="setOption"
       />
+
+      <br>
+      <p>Best Royals player is {{bestPlayer}}</p>
     </section>
   </div>
 </template>
@@ -27,7 +32,13 @@ export default {
         'Mike Sweeney',
         'Salvador Perez',
         'Amos Otis'
-      ]
+      ],
+      bestPlayer: null
+    }
+  },
+  methods: {
+    setOption(option) {
+      this.bestPlayer = option
     }
   }
 }

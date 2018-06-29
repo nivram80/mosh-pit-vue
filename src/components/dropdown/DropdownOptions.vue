@@ -7,6 +7,7 @@
       class="option"
       v-for="option in options"
       :key="option"
+      @mouseup="setOption(option)"
     >
       {{option}}
     </div>
@@ -24,6 +25,17 @@ export default {
     options: {
       type: Array,
       required: true
+    }
+  },
+  data () {
+    return {
+      selectedOption: ''
+    }
+  },
+  methods: {
+    setOption(option) {
+      this.selectedOption = option
+      this.$emit('setOption', this.selectedOption)
     }
   }
 }
@@ -47,7 +59,7 @@ export default {
     cursor: pointer;
 
     &:hover {
-      background: lightgrey;
+      background: lightgray;
     }
   }
 }

@@ -3,7 +3,18 @@
     class="select"
     @click="$emit('toggleOptions')"
   >
-    <div class="placeholder">{{placeholder}}</div>
+    <div
+      class="placeholder"
+      v-show="!model"
+    >
+      {{placeholder}}
+    </div>
+    <div
+      class="model"
+      v-show="model"
+    >
+      {{model}}
+    </div>
     <KeyboardArrowDownIcon />
   </div>
 </template>
@@ -18,6 +29,10 @@ export default {
   },
   props: {
     placeholder: {
+      type: String,
+      required: false
+    },
+    model: {
       type: String,
       required: false
     }
@@ -37,5 +52,9 @@ export default {
   border-radius: 2px;
   color: lightgray;
   cursor: pointer;
+
+  .model {
+    color: black;
+  }
 }
 </style>

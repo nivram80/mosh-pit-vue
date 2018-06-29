@@ -4,8 +4,16 @@
     v-click-outside="hideOptions"
   >
     <div class="label">{{label}}</div>
-    <DropdownSelect :placeholder="placeholder" @toggleOptions="toggleOptions" />
-    <DropdownOptions :showOptions="showOptions" :options="options" />
+    <DropdownSelect
+      :placeholder="placeholder"
+      :model="model"
+      @toggleOptions="toggleOptions"
+    />
+    <DropdownOptions
+      :showOptions="showOptions"
+      :options="options"
+      @setOption="setOption"
+    />
   </div>
 </template>
 
@@ -32,6 +40,10 @@ export default {
     options: {
       type: Array,
       required: true
+    },
+    model: {
+      type: String,
+      required: false
     }
   },
   directives: {
@@ -47,6 +59,10 @@ export default {
       this.showOptions = !this.showOptions
     },
     hideOptions() {
+      this.showOptions = false;
+    },
+    setOption(option) {
+      this.$emit('setOption', option)
       this.showOptions = false;
     }
   }
