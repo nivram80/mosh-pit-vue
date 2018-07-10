@@ -1,6 +1,7 @@
 <template>
   <div
     class="select"
+    :id="`select-${idHashKey}`"
     @click="$emit('toggleOptions')"
   >
     <div
@@ -15,46 +16,54 @@
     >
       {{model}}
     </div>
-    <KeyboardArrowDownIcon />
+    <KeyboardArrowDownIcon/>
   </div>
 </template>
 
 <script>
-import KeyboardArrowDownIcon from '@/components/icons/KeyboardArrowDownIcon.vue'
+  import KeyboardArrowDownIcon from '@/components/icons/KeyboardArrowDownIcon.vue'
 
-export default {
-  name: "DropdownSelect",
-  components: {
-    KeyboardArrowDownIcon
-  },
-  props: {
-    placeholder: {
-      type: String,
-      required: false
+  export default {
+    name: "DropdownSelect",
+    components: {
+      KeyboardArrowDownIcon
     },
-    model: {
-      type: String,
-      required: false
+    props: {
+      placeholder: {
+        type: String,
+        required: false
+      },
+      model: {
+        type: String,
+        required: false
+      }
+    },
+    computed: {
+      idHashKey() {
+        return Math.floor(Math.random() * 900000000000000)
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/mixin';
+  @import '../../assets/mixin';
 
-.select {
-  @include flex(row, space-between, center);
-  height: 40px;
-  box-sizing: border-box;
-  padding: 8px;
-  border: solid 1px black;
-  border-radius: 2px;
-  color: lightgray;
-  cursor: pointer;
+  .select {
+    @include flex(row, space-between, center);
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    border: solid 1px black;
+    border-radius: 2px;
+    cursor: pointer;
 
-  .model {
-    color: black;
+    .placeholder {
+      color: lightgray;
+    }
+
+    .model {
+      color: black;
+    }
   }
-}
 </style>

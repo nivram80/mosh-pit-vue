@@ -6,7 +6,7 @@
 </template>
 
 <script>
-export default {
-  name: "KeyboardArrowDownIcon"
-}
+  export default {
+    name: "KeyboardArrowDownIcon"
+  }
 </script>

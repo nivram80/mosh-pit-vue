@@ -15,52 +15,54 @@
 </template>
 
 <script>
-export default {
-  name: "DropdownOptions",
-  props: {
-    showOptions: {
-      type: Boolean,
-      required: true
+  export default {
+    name: "DropdownOptions",
+    props: {
+      showOptions: {
+        type: Boolean,
+        required: true
+      },
+      options: {
+        type: Array,
+        required: true
+      }
     },
-    options: {
-      type: Array,
-      required: true
-    }
-  },
-  data () {
-    return {
-      selectedOption: ''
-    }
-  },
-  methods: {
-    setOption(option) {
-      this.selectedOption = option
-      this.$emit('setOption', this.selectedOption)
+    data() {
+      return {
+        selectedOption: ''
+      }
+    },
+    methods: {
+      setOption(option) {
+        this.selectedOption = option
+        this.$emit('setOption', this.selectedOption)
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/mixin';
+  @import '../../assets/mixin';
 
-.options {
-  position: relative;
-  top: -40px;
-  background: white;
-  border: solid 1px black;
-  border-radius: 2px;
+  .options {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    background: white;
+    border: solid 1px black;
+    border-radius: 2px;
+    z-index: 3;
 
-  .option {
-    @include flex(row, flex-start, center);
-    height: 40px;
-    box-sizing: border-box;
-    padding: 8px;
-    cursor: pointer;
+    .option {
+      @include flex(row, flex-start, center);
+      height: 40px;
+      box-sizing: border-box;
+      padding: 8px;
+      cursor: pointer;
 
-    &:hover {
-      background: lightgray;
+      &:hover {
+        background: lightgray;
+      }
     }
   }
-}
 </style>
