@@ -1,6 +1,7 @@
 <template>
   <div
     class="options"
+    :style="{top: elementTop}"
     v-show="showOptions"
   >
     <div
@@ -25,11 +26,21 @@
       options: {
         type: Array,
         required: true
+      },
+      selectedDropdownId: {
+        type: Number,
+        required: false
       }
     },
     data() {
       return {
         selectedOption: ''
+      }
+    },
+    computed: {
+      elementTop() {
+        const element = document.getElementById(this.selectedDropdownId)
+        return element
       }
     },
     methods: {

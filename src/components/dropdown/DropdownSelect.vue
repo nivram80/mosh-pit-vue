@@ -1,8 +1,8 @@
 <template>
   <div
     class="select"
-    :id="`select-${idHashKey}`"
-    @click="$emit('toggleOptions')"
+    :id="idHashKey"
+    @click="$emit('toggleOptions', idHashKey)"
   >
     <div
       class="placeholder"

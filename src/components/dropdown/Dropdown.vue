@@ -12,6 +12,7 @@
     <DropdownOptions
       :showOptions="showOptions"
       :options="options"
+      :selectedDropdownId="selectedDropdownId"
       @setOption="setOption"
     />
   </div>
@@ -51,11 +52,13 @@
     },
     data() {
       return {
-        showOptions: false
+        showOptions: false,
+        selectedDropdownId: null
       }
     },
     methods: {
-      toggleOptions() {
+      toggleOptions(id) {
+        this.selectedDropdownId = id
         this.showOptions = !this.showOptions
       },
       hideOptions() {
