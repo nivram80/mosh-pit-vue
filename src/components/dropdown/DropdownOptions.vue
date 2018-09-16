@@ -61,6 +61,7 @@
     background: white;
     border: solid 1px black;
     border-radius: 2px;
+    @include box-shadow(2px);
     z-index: 3;
 
     .option {

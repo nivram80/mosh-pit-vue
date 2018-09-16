@@ -18,6 +18,8 @@
           :model="bestRestaurant"
           @setOption="setRestaurant"
         />
+
+        <MoshButton :label="'Submit'"></MoshButton>
       </form>
     </section>
   </div>
@@ -25,10 +27,12 @@
 
 <script>
   import Dropdown from '@/components/dropdown/Dropdown.vue'
+  import MoshButton from './components/Button';
 
   export default {
     name: 'app',
     components: {
+      MoshButton,
       Dropdown
     },
     data() {
