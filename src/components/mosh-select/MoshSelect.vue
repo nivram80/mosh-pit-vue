@@ -4,12 +4,12 @@
     v-click-outside="hideOptions"
   >
     <label class="dropdown-label">{{label}}</label>
-    <DropdownSelect
+    <MoshDropdownSelect
       :placeholder="placeholder"
       :model="model"
       @toggleOptions="toggleOptions"
     />
-    <DropdownOptions
+    <MoshSelectOptions
       :showOptions="showOptions"
       :options="options"
       :selectedDropdownId="selectedDropdownId"
@@ -20,14 +20,14 @@
 
 <script>
   import { ClickOutsideDirective } from '@/directives/ClickOutsideDirective.js';
-  import DropdownSelect from '@/components/dropdown/DropdownSelect';
-  import DropdownOptions from '@/components/dropdown/DropdownOptions.vue';
+  import MoshDropdownSelect from '@/components/mosh-select/MoshDropdownSelect';
+  import MoshSelectOptions from '@/components/mosh-select/MoshSelectOptions.vue';
 
   export default {
-    name: "Dropdown",
+    name: 'MoshSelect',
     components: {
-      DropdownSelect,
-      DropdownOptions
+      MoshDropdownSelect,
+      MoshSelectOptions
     },
     props: {
       label: {

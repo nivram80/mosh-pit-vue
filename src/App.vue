@@ -3,7 +3,7 @@
     <section class="component">
       <h1>Dropdowns</h1>
       <form>
-        <Dropdown
+        <MoshSelect
           :label="'Best Royals Player'"
           :placeholder="'Choose...'"
           :options="players"
@@ -11,7 +11,7 @@
           @setOption="setPlayer"
         />
 
-        <Dropdown
+        <MoshSelect
           :label="'Best Food in Omaha'"
           :placeholder="'Choose...'"
           :options="restaurants"
@@ -26,14 +26,14 @@
 </template>
 
 <script>
-  import Dropdown from '@/components/dropdown/Dropdown.vue'
   import MoshButton from './components/Button';
+  import MoshSelect from './components/mosh-select/MoshSelect';
 
   export default {
     name: 'app',
     components: {
-      MoshButton,
-      Dropdown
+      MoshSelect,
+      MoshButton
     },
     data() {
       return {

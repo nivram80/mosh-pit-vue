@@ -24,7 +24,7 @@
   import KeyboardArrowDownIcon from '@/components/icons/KeyboardArrowDownIcon.vue'
 
   export default {
-    name: "DropdownSelect",
+    name: "MoshDropdownSelect",
     components: {
       KeyboardArrowDownIcon
     },

@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: "DropdownOptions",
+    name: "MoshSelectOptions",
     props: {
       showOptions: {
         type: Boolean,
