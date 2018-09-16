@@ -23,13 +23,11 @@
 </script>
 
 <style scoped lang="scss">
-  @import '../assets/mixin';
-
   .mosh-button {
     -webkit-appearance: none;
     border: 0;
     border-radius: 2px;
-    background-color: gray;
+    background-color: $primary_action_color;
     color: white;
     padding: 0 16px;
     cursor: pointer;

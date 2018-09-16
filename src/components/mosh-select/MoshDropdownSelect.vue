@@ -47,8 +47,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import '../../assets/mixin';
-
   .select {
     @include flex(row, space-between, center);
     height: 40px;

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <section class="component">
-      <h1>Dropdowns</h1>
+      <h1>Selects</h1>
       <form>
         <MoshSelect
           :label="'Best Royals Player'"
@@ -67,7 +67,15 @@
 </script>
 
 <style scoped lang="scss">
-  @import '/assets/elements';
+  body, section, div, p, ul, ol, li, a, h1, h1, h3, h4, button {
+    margin: 0;
+    padding: 0;
+    font-family: $primary_font_family;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+  }
 
   .component {
     width: 100%;

@@ -52,8 +52,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import '../../assets/mixin';
-
   .options {
     position: absolute;
     top: -40px;

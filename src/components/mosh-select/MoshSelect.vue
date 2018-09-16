@@ -1,9 +1,9 @@
 <template>
   <div
-    class="dropdown"
+    class="select"
     v-click-outside="hideOptions"
   >
-    <label class="dropdown-label">{{label}}</label>
+    <label class="select-label">{{label}}</label>
     <MoshDropdownSelect
       :placeholder="placeholder"
       :model="model"
@@ -71,12 +71,12 @@
   }
 </script>
 
-<style scoped>
-  .dropdown {
+<style scoped lang="scss">
+  .select {
     position: relative;
   }
 
-  .dropdown-label {
+  .select-label {
     font-size: 12px;
   }
 </style>
