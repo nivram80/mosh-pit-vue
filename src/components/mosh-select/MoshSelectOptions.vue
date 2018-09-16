@@ -54,23 +54,23 @@
 <style scoped lang="scss">
   .options {
     position: absolute;
-    top: -40px;
+    top: -$option-height;
     width: 100%;
-    background: white;
-    border: solid 1px black;
-    border-radius: 2px;
+    background: $option-bg-color;
+    border: $border;
+    border-radius: $border-radius;
     @include box-shadow(2px);
     z-index: 3;
 
     .option {
       @include flex(row, flex-start, center);
-      height: 40px;
+      height: $option-height;
       box-sizing: border-box;
       padding: 8px;
       cursor: pointer;
 
       &:hover {
-        background: lightgray;
+        background: $option-hover-bg-color;
       }
     }
   }

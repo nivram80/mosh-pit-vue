@@ -49,19 +49,19 @@
 <style scoped lang="scss">
   .select {
     @include flex(row, space-between, center);
-    height: 40px;
+    height: $select-height;
     box-sizing: border-box;
     padding: 8px;
-    border: solid 1px black;
-    border-radius: 2px;
+    border: $border;
+    border-radius: $border-radius;
     cursor: pointer;
 
     .placeholder {
-      color: lightgray;
+      color: $input-placeholder-color;
     }
 
     .model {
-      color: black;
+      color: $default-font-color;
     }
   }
 </style>

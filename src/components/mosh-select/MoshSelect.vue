@@ -77,6 +77,6 @@
   }
 
   .select-label {
-    font-size: 12px;
+    font-size: $label-font-size;
   }
 </style>

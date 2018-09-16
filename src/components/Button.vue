@@ -25,23 +25,25 @@
 <style scoped lang="scss">
   .mosh-button {
     -webkit-appearance: none;
-    border: 0;
-    border-radius: 2px;
-    background-color: $primary_action_color;
-    color: white;
+    border: $primary-button-border;
+    border-radius: $border-radius;
+    background-color: $primary-action-color;
+    color: $primary-button-color;
     padding: 0 16px;
     cursor: pointer;
-    min-height: 40px;
-    font-size: 16px;
+    min-height: $primary-button-height;
+    font-size: $default-font-size;
     @include box-shadow(2px);
     outline: 0;
 
     &:hover, &:focus {
       @include box-shadow(4px);
+      background-color: $primary-button-hover-bg-color;
     }
 
     &:active {
       @include box-shadow(1px);
+      background-color: $primary-button-hover-bg-color;
     }
   }
 </style>

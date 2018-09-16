@@ -70,11 +70,12 @@
   body, section, div, p, ul, ol, li, a, h1, h1, h3, h4, button {
     margin: 0;
     padding: 0;
-    font-family: $primary_font_family;
+    font-family: $default-font-family;
   }
 
   h1 {
     margin-bottom: 8px;
+    font-size: $h1-font-size;
   }
 
   .component {

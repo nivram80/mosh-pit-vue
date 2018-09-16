@@ -1,2 +1,37 @@
-$primary_font_family: 'Arimo', sans-serif;
-$primary_action_color: gray;
+/* Colors */
+$primary-black: #292929;
+$primary-light-gray: #ccc;
+$primary-dark-gray: #aaa;
+$primary-darkest-gray: #888;
+$primary-action-color: #aaa;
+
+/* Fonts */
+$default-font-family: 'Arimo', sans-serif;
+$default-font-size: 16px;
+$default-font-color: $primary-black;
+$h1-font-size: 24px;
+$h2-font-size: 18px;
+
+/* Borders */
+$border-color: $primary-black;
+$border: solid 1px $border-color;
+$border-radius: 2px;
+
+/* Inputs */
+$input-height: 40px;
+$input-background-color: white;
+$input-placeholder-color: lightgray;
+$label-font-size: 12px;
+
+/* Selects */
+$select-height: 40px;
+$option-height: 40px;
+$option-bg-color: white;
+$option-hover-bg-color: $primary-action-color;
+
+/* Buttons */
+$primary-button-height: 40px;
+$primary-button-color: white;
+$primary-button-bg-color: $primary-action-color;
+$primary-button-hover-bg-color: $primary-darkest-gray;
+$primary-button-border: 0;
