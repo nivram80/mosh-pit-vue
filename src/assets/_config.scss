@@ -1,4 +1,5 @@
 /* Colors */
+$primary-white: #fff;
 $primary-black: #292929;
 $primary-light-gray: #ccc;
 $primary-dark-gray: #aaa;
@@ -19,19 +20,19 @@ $border-radius: 2px;
 
 /* Inputs */
 $input-height: 40px;
-$input-background-color: white;
-$input-placeholder-color: lightgray;
+$input-background-color: $primary-white;
+$input-placeholder-color: $primary-light-gray;
 $label-font-size: 12px;
 
 /* Selects */
 $select-height: 40px;
 $option-height: 40px;
-$option-bg-color: white;
-$option-hover-bg-color: $primary-action-color;
+$option-bg-color: $primary-white;
+$option-hover-bg-color: $primary-light-gray;
 
 /* Buttons */
 $primary-button-height: 40px;
-$primary-button-color: white;
+$primary-button-color: $primary-white;
 $primary-button-bg-color: $primary-action-color;
 $primary-button-hover-bg-color: $primary-darkest-gray;
 $primary-button-border: 0;
