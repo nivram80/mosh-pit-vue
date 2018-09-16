@@ -19,7 +19,6 @@
           @setOption="setRestaurant"
         />
       </form>
-
     </section>
   </div>
 </template>
@@ -67,7 +66,11 @@
   @import '/assets/elements';
 
   .component {
-    width: 40%;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      width: 40%;
+    }
   }
 
   form > div {

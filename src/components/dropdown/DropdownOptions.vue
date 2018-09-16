@@ -39,8 +39,7 @@
     },
     computed: {
       elementTop() {
-        const element = document.getElementById(this.selectedDropdownId)
-        return element
+        return document.getElementById(this.selectedDropdownId)
       }
     },
     methods: {

@@ -57,8 +57,7 @@
       }
     },
     methods: {
-      toggleOptions(id) {
-        this.selectedDropdownId = id
+      toggleOptions() {
         this.showOptions = !this.showOptions
       },
       hideOptions() {
