@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import MoshButton from './components/Button';
+  import MoshButton from './components/MoshButton';
   import MoshSelect from './components/mosh-select/MoshSelect';
 
   export default {
