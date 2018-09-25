@@ -6,7 +6,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/nivram80/mosh-pit-vue",
+    "url": "https://github.com/nivram80/mosh-pit-vue"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,7 +19,7 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "style-resources-loader": "^1.2.1",
-    "vue-cli-plugin-style-resources-loader": "^0.1.3",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
