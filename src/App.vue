@@ -49,7 +49,7 @@
         ],
         restaurants: [
           'Salween',
-          'Flemmings',
+          'Drover',
           'Amsterdam',
           'Maria Bonita',
           'Ray\'s'
