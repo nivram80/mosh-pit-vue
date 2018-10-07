@@ -1,8 +1,15 @@
 <template>
   <div id="app">
     <section class="component">
-      <h1>Selects</h1>
+      <h1>Mosh Pit Components</h1>
+      <br>
       <form>
+        <MoshTextInput
+          :label="'First Name'"
+          :placeholder="'Optional'"
+          :model="firstName"
+          @setValue="setFirstName"
+        />
         <MoshSelect
           :label="'Best Royals Player'"
           :placeholder="'Choose...'"
@@ -29,17 +36,20 @@
 </template>
 
 <script>
+  import MoshTextInput from './components/MoshTextInput';
   import MoshButton from './components/MoshButton';
   import MoshSelect from './components/mosh-select/MoshSelect';
 
   export default {
     name: 'app',
     components: {
+      MoshTextInput,
       MoshSelect,
       MoshButton
     },
     data() {
       return {
+        firstName: '',
         players: [
           'George Brett',
           'Willie Wilson',
@@ -59,6 +69,9 @@
       }
     },
     methods: {
+      setFirstName(name) {
+        this.firstName = name
+      },
       setPlayer(option) {
         this.bestPlayer = option
       },
@@ -66,7 +79,8 @@
         this.bestRestaurant = option
       },
       submitForm() {
-        alert('Sending data into the clouds!')
+        const data = `First Name: ${this.firstName}\nBest Royal: ${this.bestPlayer}\nBest Restaurant: ${this.bestRestaurant}`
+        alert(data)
       }
     }
   }
