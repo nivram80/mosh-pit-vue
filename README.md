@@ -37,7 +37,8 @@ Add whatever available mosh-pit components to your component:
     components: {
       MoshButton,
       MoshSelect,
-      MoshTextInput
+      MoshTextInput,
+      MoshTextarea
     },
     ...
 ```
@@ -65,6 +66,15 @@ Add whatever available mosh-pit components to your component:
       :placeholder="'Optional'"
       :model="firstName"
       @setValue="setFirstName"
+    />
+  ```
+### Textareas
+  ```
+    <MoshTextarea
+      :label="'Comments'"
+      :placeholder="'Optional'"
+      :model="comments"
+      @setValue="setComments"
     />
   ```
     
