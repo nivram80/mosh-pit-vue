@@ -72,11 +72,10 @@
 </script>
 
 <style scoped lang="scss">
+  .select-label {
+    @include form-element-label;
+  }
   .select {
     position: relative;
-  }
-
-  .select-label {
-    font-size: $label-font-size;
   }
 </style>

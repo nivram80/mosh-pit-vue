@@ -52,8 +52,7 @@
 
 <style scoped lang="scss">
   .text-input-label {
-    font-size: $label-font-size;
-    display: block;
+    @include form-element-label;
   }
   .input {
     width: 100%;

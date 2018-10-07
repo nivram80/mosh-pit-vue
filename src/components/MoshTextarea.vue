@@ -51,8 +51,7 @@
 
 <style scoped lang="scss">
   .textarea-label {
-    font-size: $label-font-size;
-    display: block;
+    @include form-element-label;
   }
   .textarea {
     width: 100%;

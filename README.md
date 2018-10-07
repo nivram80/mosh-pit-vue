@@ -22,6 +22,7 @@ module.exports = {
 ```
 
 Add the config.scss and mixin.scss files found in the mosh-pit-vue src/assets directory to your project's src/assets directory.  
+
 If you decide to use a different path for your project, make sure you adjust the `path.resolve...` paths in the `vue.config.js` file.
 
 

@@ -8,3 +8,8 @@
 @mixin box-shadow($depth) {
   box-shadow: 0 0 $depth rgba(0, 0, 0, .12), 0 $depth $depth rgba(0, 0, 0, .24);
 }
+
+@mixin form-element-label() {
+  font-size: $label-font-size;
+  display: block;
+}
