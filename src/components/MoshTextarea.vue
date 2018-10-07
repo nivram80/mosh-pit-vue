@@ -1,19 +1,18 @@
 <template>
-  <div class="input-container">
+  <div class="textarea-container">
     <label
-      class="text-input-label"
+      class="textarea-label"
       :for="randomIdKey"
     >
       {{label}}
     </label>
-    <input
-      type=text
-      class="input"
+    <textarea
+      class="textarea"
       v-model="value"
       :id="randomIdKey"
       :placeholder="placeholder"
       @keyup="setValue"
-    >
+    ></textarea>
   </div>
 </template>
 
@@ -21,7 +20,7 @@
   import { generateRandomKey } from '../utilities/misc.utilities';
 
   export default {
-    name: "MoshTextInput",
+    name: 'MoshTextarea',
     props: {
       label: {
         type: String,
@@ -51,13 +50,13 @@
 </script>
 
 <style scoped lang="scss">
-  .text-input-label {
+  .textarea-label {
     font-size: $label-font-size;
     display: block;
   }
-  .input {
+  .textarea {
     width: 100%;
-    height: $select-height;
+    height: $textarea-height;
     box-sizing: border-box;
     padding: $form-element-padding;
     border: $border;

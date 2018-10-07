@@ -10,6 +10,7 @@
           :model="firstName"
           @setValue="setFirstName"
         />
+
         <MoshSelect
           :label="'Best Royals Player'"
           :placeholder="'Choose...'"
@@ -26,6 +27,13 @@
           @setOption="setRestaurant"
         />
 
+        <MoshTextarea
+          :label="'Comments'"
+          :placeholder="'Optional'"
+          :model="comments"
+          @setValue="setComments"
+        />
+
         <MoshButton
           :label="'Submit'"
           @buttonClick="submitForm"
@@ -39,13 +47,15 @@
   import MoshTextInput from './components/MoshTextInput';
   import MoshButton from './components/MoshButton';
   import MoshSelect from './components/mosh-select/MoshSelect';
+  import MoshTextarea from './components/MoshTextarea';
 
   export default {
     name: 'app',
     components: {
       MoshTextInput,
       MoshSelect,
-      MoshButton
+      MoshButton,
+      MoshTextarea
     },
     data() {
       return {
@@ -65,7 +75,8 @@
           'Ray\'s'
         ],
         bestPlayer: null,
-        bestRestaurant: null
+        bestRestaurant: null,
+        comments: ''
       }
     },
     methods: {
@@ -78,8 +89,17 @@
       setRestaurant(option) {
         this.bestRestaurant = option
       },
+      setComments(comments) {
+        this.comments = comments
+      },
       submitForm() {
-        const data = `First Name: ${this.firstName}\nBest Royal: ${this.bestPlayer}\nBest Restaurant: ${this.bestRestaurant}`
+        const data =
+          `
+          First Name: ${this.firstName}\n
+          Best Royal: ${this.bestPlayer}\n
+          Best Restaurant: ${this.bestRestaurant}\n
+          Comments: ${this.comments}
+          `
         alert(data)
       }
     }
