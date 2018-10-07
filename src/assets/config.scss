@@ -46,9 +46,14 @@ $option-hover-bg-color: $primary-light-gray;
 $button-padding: 0 16px;
 $primary-button-height: 40px;
 $primary-button-color: $primary-white;
-$primary-button-bg-color: $primary-action-color;
-$primary-button-hover-bg-color: $primary-darkest-gray;
+$primary-button-bg-color: $primary-darkest-gray;
+$primary-button-hover-bg-color: $primary-black;
 $primary-button-border: 0;
+$secondary-button-height: 40px;
+$secondary-button-color: $primary-darkest-gray;
+$secondary-button-bg-color: $primary-white;
+$secondary-button-hover-bg-color: $primary-light-gray;
+$secondary-button-border: 0;
 
 /* Element Defaults */
 body, section, div, p, ul, ol, li, a, h1, h1, h3, h4, button {

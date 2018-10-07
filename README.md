@@ -45,10 +45,14 @@ Add whatever available mosh-pit components to your component:
 ### Buttons
 ```
   <MoshButton 
-    :label="'Submit'" 
+    :label="'Submit'"
+    :type="'primary'"
     @buttonClick="submitFunction"
   />
 ```
+
+Right now there are two types of buttons, `primary` and `secondary`.
+
 ### Selects
 ```
   <MoshSelect
@@ -78,6 +82,7 @@ Add whatever available mosh-pit components to your component:
   />
 ```
 
+# Disable Components
 All components accept the optional `isDisabled` attribute that will add an opacity and disable pointer events on the component:
 ```
   <MoshButton 

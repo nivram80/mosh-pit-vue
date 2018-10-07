@@ -2,7 +2,7 @@
   <button
     type="button"
     class="mosh-button"
-    :class="{disabled: isDisabled}"
+    :class="{disabled: isDisabled, primary: type === 'primary', secondary: type === 'secondary'}"
     @mouseup="$emit('buttonClick')"
   >
     {{label}}
@@ -20,6 +20,10 @@
       isDisabled: {
         type: Boolean,
         default: false
+      },
+      type: {
+        type: String,
+        default: 'primary'
       }
     }
   }
@@ -30,7 +34,7 @@
     -webkit-appearance: none;
     border: $primary-button-border;
     border-radius: $border-radius;
-    background-color: $primary-action-color;
+    background-color: $primary-button-bg-color;
     color: $primary-button-color;
     padding: $button-padding;
     cursor: pointer;
@@ -51,6 +55,22 @@
 
     &.disabled {
       @include disabled;
+    }
+
+    &.secondary {
+      background-color: $secondary-button-bg-color;
+      color: $secondary-button-color;
+      min-height: $secondary-button-height;
+
+      &:hover, &:focus {
+        @include box-shadow(4px);
+        background-color: $secondary-button-hover-bg-color;
+      }
+
+      &:active {
+        @include box-shadow(1px);
+        background-color: $secondary-button-hover-bg-color;
+      }
     }
   }
 </style>

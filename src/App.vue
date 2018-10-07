@@ -37,7 +37,14 @@
 
         <MoshButton
           :label="'Submit'"
+          :type="'primary'"
           @buttonClick="submitForm"
+        />
+
+        <MoshButton
+          :label="'Change'"
+          :type="'secondary'"
+          @buttonClick="changeAlert"
         />
 
         <MoshButton
@@ -107,6 +114,9 @@
           Comments: ${this.comments}
           `
         alert(data)
+      },
+      changeAlert() {
+        alert('Click change alert!')
       }
     }
   }
