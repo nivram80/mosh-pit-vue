@@ -29,12 +29,22 @@ Change the variables in the `config.scss` file now in your project to your likin
 
 
 # Components Available To Use So Far
+Add whatever available mosh-pit components to your component:
+```
+  export default {
+    ... 
+    components: {
+      MoshButton,
+      MoshSelect
+    },
+    ...
+```
 - Buttons
   ```
     <MoshButton 
       :label="'Submit'" 
       @buttonClick="submitFunction"
-      />
+    />
   ```
 - Selects
   ```
