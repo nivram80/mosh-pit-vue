@@ -18,6 +18,13 @@ $border-color: $primary-black;
 $border: solid 1px $border-color;
 $border-radius: 2px;
 
+/* Block Elements */
+$default-margin: 0;
+$default-padding: 0;
+
+/* Headers */
+$h1-margin: 0 0 8px 0;
+
 /* Inputs */
 $input-height: 40px;
 $input-background-color: $primary-white;
@@ -36,3 +43,15 @@ $primary-button-color: $primary-white;
 $primary-button-bg-color: $primary-action-color;
 $primary-button-hover-bg-color: $primary-darkest-gray;
 $primary-button-border: 0;
+
+/* Element Defaults */
+body, section, div, p, ul, ol, li, a, h1, h1, h3, h4, button {
+  margin: $default-margin;
+  padding: $default-padding;
+  font-family: $default-font-family;
+}
+
+h1 {
+  margin-bottom: $h1-margin;
+  font-size: $h1-font-size;
+}

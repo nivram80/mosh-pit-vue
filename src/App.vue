@@ -66,24 +66,13 @@
         this.bestRestaurant = option
       },
       submitForm() {
-        console.log('Sending data into the clouds!')
+        alert('Sending data into the clouds!')
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  body, section, div, p, ul, ol, li, a, h1, h1, h3, h4, button {
-    margin: 0;
-    padding: 0;
-    font-family: $default-font-family;
-  }
-
-  h1 {
-    margin-bottom: 8px;
-    font-size: $h1-font-size;
-  }
-
   .component {
     width: 100%;
 
