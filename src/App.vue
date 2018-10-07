@@ -38,6 +38,11 @@
           :label="'Submit'"
           @buttonClick="submitForm"
         />
+
+        <MoshButton
+          :label="'Disabled'"
+          :isDisabled="true"
+        />
       </form>
     </section>
   </div>
@@ -117,5 +122,9 @@
 
   form > div {
     margin-bottom: 16px;
+  }
+
+  form > button {
+    margin-right: 8px;
   }
 </style>

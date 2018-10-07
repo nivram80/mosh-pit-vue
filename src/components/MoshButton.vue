@@ -2,6 +2,7 @@
   <button
     type="button"
     class="mosh-button"
+    :class="{disabled: isDisabled}"
     @mouseup="$emit('buttonClick')"
   >
     {{label}}
@@ -45,6 +46,11 @@
     &:active {
       @include box-shadow(1px);
       background-color: $primary-button-hover-bg-color;
+    }
+
+    &.disabled {
+      opacity: .5;
+      pointer-events: none;
     }
   }
 </style>
