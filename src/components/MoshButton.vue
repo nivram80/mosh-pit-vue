@@ -18,7 +18,8 @@
         required: true
       },
       isDisabled: {
-        type: Boolean
+        type: Boolean,
+        default: false
       }
     }
   }

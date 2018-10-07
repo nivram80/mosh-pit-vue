@@ -47,6 +47,7 @@ Add whatever available mosh-pit components to your component:
   ```
     <MoshButton 
       :label="'Submit'" 
+      :isDisabled="false"
       @buttonClick="submitFunction"
     />
   ```
