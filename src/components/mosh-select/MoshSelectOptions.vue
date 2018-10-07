@@ -66,7 +66,7 @@
       @include flex(row, flex-start, center);
       height: $option-height;
       box-sizing: border-box;
-      padding: 8px;
+      padding: $form-element-padding;
       cursor: pointer;
 
       &:hover {

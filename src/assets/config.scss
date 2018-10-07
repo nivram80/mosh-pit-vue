@@ -25,6 +25,9 @@ $default-padding: 0;
 /* Headers */
 $h1-margin: 0 0 8px 0;
 
+/* Form Elements */
+$form-element-padding: 8px;
+
 /* Inputs */
 $input-height: 40px;
 $input-background-color: $primary-white;
@@ -38,6 +41,7 @@ $option-bg-color: $primary-white;
 $option-hover-bg-color: $primary-light-gray;
 
 /* Buttons */
+$button-padding: 0 16px;
 $primary-button-height: 40px;
 $primary-button-color: $primary-white;
 $primary-button-bg-color: $primary-action-color;

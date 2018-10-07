@@ -30,7 +30,7 @@
     border-radius: $border-radius;
     background-color: $primary-action-color;
     color: $primary-button-color;
-    padding: 0 16px;
+    padding: $button-padding;
     cursor: pointer;
     min-height: $primary-button-height;
     font-size: $default-font-size;

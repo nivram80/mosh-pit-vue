@@ -59,7 +59,7 @@
     width: 100%;
     height: $select-height;
     box-sizing: border-box;
-    padding: 8px;
+    padding: $form-element-padding;
     border: $border;
     border-radius: $border-radius;
     cursor: pointer;
