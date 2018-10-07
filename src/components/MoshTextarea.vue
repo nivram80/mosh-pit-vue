@@ -56,11 +56,7 @@
   .textarea {
     width: 100%;
     height: $textarea-height;
-    box-sizing: border-box;
-    padding: $form-element-padding;
-    border: $border;
-    border-radius: $border-radius;
-    cursor: pointer;
+    @include form-element-block-styles;
     font-size: $default-font-size;
   }
   ::placeholder {

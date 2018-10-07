@@ -50,11 +50,7 @@
   .select {
     @include flex(row, space-between, center);
     height: $select-height;
-    box-sizing: border-box;
-    padding: $form-element-padding;
-    border: $border;
-    border-radius: $border-radius;
-    cursor: pointer;
+    @include form-element-block-styles;
 
     .placeholder {
       color: $input-placeholder-color;

@@ -13,3 +13,11 @@
   font-size: $label-font-size;
   display: block;
 }
+
+@mixin form-element-block-styles() {
+  box-sizing: border-box;
+  padding: $form-element-padding;
+  border: $border;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
