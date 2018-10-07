@@ -36,7 +36,8 @@ Add whatever available mosh-pit components to your component:
     ... 
     components: {
       MoshButton,
-      MoshSelect
+      MoshSelect,
+      MoshTextInput
     },
     ...
 ```
@@ -57,3 +58,13 @@ Add whatever available mosh-pit components to your component:
       @setOption="setPlayer"
     />
   ```
+### Text Inputs
+  ```
+    <MoshTextInput
+      :label="'First Name'"
+      :placeholder="'Optional'"
+      :model="firstName"
+      @setValue="setFirstName"
+    />
+  ```
+    
