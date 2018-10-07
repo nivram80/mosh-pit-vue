@@ -2,6 +2,7 @@
   <button
     type="button"
     class="mosh-button"
+    @mouseup="$emit('buttonClick')"
   >
     {{label}}
   </button>

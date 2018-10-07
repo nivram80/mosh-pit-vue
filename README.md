@@ -1,7 +1,7 @@
-#Install
+# Install
 `npm i mosh-pit-vue`
 
-#Config
+# Config
 Add a `vue.config.js` file to the root directory of your application if it doesn't already exist.
 
 Add the following code to the vue.config.js file:
@@ -24,5 +24,25 @@ module.exports = {
 Add the config.scss and mixin.scss files found in the src/assets directory to your project's src/assets directory.
 
 
-##Customize the global styles of your project
+## Customize the global styles of your project
 Change the variables in the `config.scss` file now in your project to your liking.
+
+
+# Components Available To Use So Far
+- Buttons
+  ```
+    <MoshButton 
+      :label="'Submit'" 
+      @buttonClick="submitFunction"
+      />
+  ```
+- Selects
+  ```
+    <MoshSelect
+      :label="'Best Royals Player'"
+      :placeholder="'Choose...'"
+      :options="players"
+      :model="bestPlayer"
+      @setOption="setPlayer"
+    />
+  ```

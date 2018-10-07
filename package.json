@@ -1,7 +1,7 @@
 {
   "name": "mosh-pit-vue",
   "description": "Customizable UI compoents for Vue.js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Todd Nichols",
   "private": false,
   "repository": {

@@ -19,7 +19,10 @@
           @setOption="setRestaurant"
         />
 
-        <MoshButton :label="'Submit'"></MoshButton>
+        <MoshButton
+          :label="'Submit'"
+          @buttonClick="submitForm"
+        />
       </form>
     </section>
   </div>
@@ -61,6 +64,9 @@
       },
       setRestaurant(option) {
         this.bestRestaurant = option
+      },
+      submitForm() {
+        console.log('Sending data into the clouds!')
       }
     }
   }
