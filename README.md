@@ -38,45 +38,51 @@ Add whatever available mosh-pit components to your component:
     components: {
       MoshButton,
       MoshSelect,
-      MoshTextInput,
-      MoshTextarea
+      // etc...
     },
     ...
 ```
 ### Buttons
-  ```
-    <MoshButton 
-      :label="'Submit'" 
-      :isDisabled="false"
-      @buttonClick="submitFunction"
-    />
-  ```
+```
+  <MoshButton 
+    :label="'Submit'" 
+    @buttonClick="submitFunction"
+  />
+```
 ### Selects
-  ```
-    <MoshSelect
-      :label="'Best Royals Player'"
-      :placeholder="'Choose...'"
-      :options="players"
-      :model="bestPlayer"
-      @setOption="setPlayer"
-    />
-  ```
+```
+  <MoshSelect
+    :label="'Best Royals Player'"
+    :placeholder="'Choose...'"
+    :options="players"
+    :model="bestPlayer"
+    @setOption="setPlayer"
+  />
+```
 ### Text Inputs
-  ```
-    <MoshTextInput
-      :label="'First Name'"
-      :placeholder="'Optional'"
-      :model="firstName"
-      @setValue="setFirstName"
-    />
-  ```
+```
+  <MoshTextInput
+    :label="'First Name'"
+    :placeholder="'Optional'"
+    :model="firstName"
+    @setValue="setFirstName"
+  />
+```
 ### Textareas
-  ```
-    <MoshTextarea
-      :label="'Comments'"
-      :placeholder="'Optional'"
-      :model="comments"
-      @setValue="setComments"
-    />
-  ```
-    
+```
+  <MoshTextarea
+    :label="'Comments'"
+    :placeholder="'Optional'"
+    :model="comments"
+    @setValue="setComments"
+  />
+```
+
+All components accept the optional `isDisabled` attribute that will add an opacity and disable pointer events on the component:
+```
+  <MoshButton 
+    :label="'Submit'"
+    :isDisabled="true" // defaults to false
+    @buttonClick="submitFunction"
+  />
+```

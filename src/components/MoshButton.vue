@@ -50,8 +50,7 @@
     }
 
     &.disabled {
-      opacity: .5;
-      pointer-events: none;
+      @include disabled;
     }
   }
 </style>

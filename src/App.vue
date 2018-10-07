@@ -24,6 +24,7 @@
           :placeholder="'Choose...'"
           :options="restaurants"
           :model="bestRestaurant"
+          :isDisabled="true"
           @setOption="setRestaurant"
         />
 

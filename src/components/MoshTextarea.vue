@@ -1,5 +1,8 @@
 <template>
-  <div class="textarea-container">
+  <div
+    class="textarea-container"
+    :class="{disabled: isDisabled}"
+  >
     <label
       class="textarea-label"
       :for="randomIdKey"
@@ -33,6 +36,10 @@
       placeholder: {
         type: String,
         required: false
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
@@ -53,13 +60,19 @@
   .textarea-label {
     @include form-element-label;
   }
+
   .textarea {
     width: 100%;
     height: $textarea-height;
     @include form-element-block-styles;
     font-size: $default-font-size;
   }
+
   ::placeholder {
     color: $input-placeholder-color;
+  }
+
+  .disabled {
+    @include disabled;
   }
 </style>

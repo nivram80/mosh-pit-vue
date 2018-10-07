@@ -1,6 +1,7 @@
 <template>
   <div
     class="select"
+    :class="{disabled: isDisabled}"
     v-click-outside="hideOptions"
   >
     <label class="select-label">{{label}}</label>
@@ -45,6 +46,10 @@
       model: {
         type: String,
         required: false
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
       }
     },
     directives: {
@@ -75,7 +80,12 @@
   .select-label {
     @include form-element-label;
   }
+
   .select {
     position: relative;
+  }
+
+  .disabled {
+    @include disabled;
   }
 </style>

@@ -1,5 +1,8 @@
 <template>
-  <div class="input-container">
+  <div
+    class="input-container"
+    :class="{disabled: isDisabled}"
+  >
     <label
       class="text-input-label"
       :for="randomIdKey"
@@ -34,6 +37,10 @@
       placeholder: {
         type: String,
         required: false
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
@@ -54,13 +61,19 @@
   .text-input-label {
     @include form-element-label;
   }
+
   .input {
     width: 100%;
     height: $select-height;
     @include form-element-block-styles;
     font-size: $default-font-size;
   }
+
   ::placeholder {
     color: $input-placeholder-color;
+  }
+
+  .disabled {
+    @include disabled;
   }
 </style>
