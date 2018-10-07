@@ -4,7 +4,7 @@
 # Config
 Add a `vue.config.js` file to the root directory of your application if it doesn't already exist.
 
-Add the following code to the vue.config.js file:
+Add the following code to the `vue.config.js` file:
 ```$xslt
 const path = require('path')
 
@@ -21,11 +21,12 @@ module.exports = {
 }
 ```
 
-Add the config.scss and mixin.scss files found in the src/assets directory to your project's src/assets directory.
+Add the config.scss and mixin.scss files found in the mosh-pit-vue src/assets directory to your project's src/assets directory.  
+If you decide to use a different path for your project, make sure you adjust the `path.resolve...` paths in the `vue.config.js` file.
 
 
 ## Customize the global styles of your project
-Change the variables in the `config.scss` file now in your project to your liking.
+Now you can change the variables in your project's `config.scss` file to your liking.
 
 
 # Components Available To Use So Far
@@ -39,14 +40,14 @@ Add whatever available mosh-pit components to your component:
     },
     ...
 ```
-- Buttons
+### Buttons
   ```
     <MoshButton 
       :label="'Submit'" 
       @buttonClick="submitFunction"
     />
   ```
-- Selects
+### Selects
   ```
     <MoshSelect
       :label="'Best Royals Player'"
