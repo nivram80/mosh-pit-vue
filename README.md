@@ -72,6 +72,16 @@ Right now there are two types of buttons, `primary` and `secondary`.
     @setValue="setFirstName"
   />
 ```
+### Radio Buttons
+```
+  <MoshRadioGroup
+    :label="'Best Haircut'"
+    :model="bestHaircut"
+    :options="haircuts"
+    :isInline="false"
+    @setValue="setHaircut"
+  />
+```
 ### Textareas
 ```
   <MoshTextarea

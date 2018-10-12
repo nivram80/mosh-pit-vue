@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import MoshRadio from '@/components/mosh-radio/MoshRadio';
+  import MoshRadio from './MoshRadio';
 
   export default {
     name: 'MoshRadioGroup',
