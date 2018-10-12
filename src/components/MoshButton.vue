@@ -64,6 +64,7 @@
 
       &:hover, &:focus {
         @include box-shadow(4px);
+        color: $secondary-button-bg-color;
         background-color: $secondary-button-hover-bg-color;
       }
 

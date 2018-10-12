@@ -28,6 +28,15 @@
           @setOption="setRestaurant"
         />
 
+        <MoshRadioGroup
+          :label="'Best Haircut'"
+          :model="bestHaircut"
+          :options="haircuts"
+          :isInline="false"
+          :isDisabled="false"
+          @setValue="setHaircut"
+        />
+
         <MoshTextarea
           :label="'Comments'"
           :placeholder="'Optional'"
@@ -61,6 +70,7 @@
   import MoshButton from './components/MoshButton';
   import MoshSelect from './components/mosh-select/MoshSelect';
   import MoshTextarea from './components/MoshTextarea';
+  import MoshRadioGroup from './components/mosh-radio/MoshRadioGroup';
 
   export default {
     name: 'app',
@@ -68,7 +78,8 @@
       MoshTextInput,
       MoshSelect,
       MoshButton,
-      MoshTextarea
+      MoshTextarea,
+      MoshRadioGroup
     },
     data() {
       return {
@@ -87,8 +98,15 @@
           'Maria Bonita',
           'Ray\'s'
         ],
-        bestPlayer: null,
-        bestRestaurant: null,
+        haircuts: [
+          'Buzzcut',
+          'Flattop',
+          'Mohawk',
+          'Bedhead'
+        ],
+        bestPlayer: '',
+        bestRestaurant: '',
+        bestHaircut: '',
         comments: ''
       }
     },
@@ -101,6 +119,9 @@
       },
       setRestaurant(option) {
         this.bestRestaurant = option
+      },
+      setHaircut(haircut) {
+        this.bestHaircut = haircut
       },
       setComments(comments) {
         this.comments = comments
