@@ -32,7 +32,7 @@
           :label="'Best Haircut'"
           :model="bestHaircut"
           :options="haircuts"
-          :isInline="false"
+          :isInline="true"
           :isDisabled="false"
           @setValue="setHaircut"
         />
