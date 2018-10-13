@@ -132,6 +132,7 @@
           First Name: ${this.firstName}\n
           Best Royal: ${this.bestPlayer}\n
           Best Restaurant: ${this.bestRestaurant}\n
+          Best Haircut: ${this.bestHaircut}\n
           Comments: ${this.comments}
           `
         alert(data)
