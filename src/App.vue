@@ -44,6 +44,12 @@
           @setValue="setComments"
         />
 
+        <MoshCheckbox
+          :label="'Mastered Vue.js yet?'"
+          :model="hasMasteredVueJs"
+          @setValue="setVueJsStatus"
+        />
+
         <MoshButton
           :label="'Submit'"
           :type="'primary'"
@@ -71,6 +77,7 @@
   import MoshSelect from './components/mosh-select/MoshSelect';
   import MoshTextarea from './components/MoshTextarea';
   import MoshRadioGroup from './components/mosh-radio/MoshRadioGroup';
+  import MoshCheckbox from './components/MoshCheckbox';
 
   export default {
     name: 'app',
@@ -79,7 +86,8 @@
       MoshSelect,
       MoshButton,
       MoshTextarea,
-      MoshRadioGroup
+      MoshRadioGroup,
+      MoshCheckbox
     },
     data() {
       return {
@@ -107,7 +115,8 @@
         bestPlayer: '',
         bestRestaurant: '',
         bestHaircut: '',
-        comments: ''
+        comments: '',
+        hasMasteredVueJs: false
       }
     },
     methods: {
@@ -126,6 +135,9 @@
       setComments(comments) {
         this.comments = comments
       },
+      setVueJsStatus(status) {
+        this.hasMasteredVueJs = status
+      },
       submitForm() {
         const data =
           `
@@ -133,7 +145,8 @@
           Best Royal: ${this.bestPlayer}\n
           Best Restaurant: ${this.bestRestaurant}\n
           Best Haircut: ${this.bestHaircut}\n
-          Comments: ${this.comments}
+          Comments: ${this.comments}\n
+          Mastered Vue.js?: ${this.hasMasteredVueJs}
           `
         alert(data)
       },
